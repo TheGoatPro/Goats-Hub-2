@@ -1,0 +1,587 @@
+local Library =
+loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local Window = Library.CreateLib("Goats Hub 2", "BloodTheme")
+
+---The world sections
+local TWOHTab = Window:NewTab("TwOh Stuff")
+local twoh1stSection = TWOHTab:NewSection("Tapper")
+twoh1stSection:NewButton("OverHeavenKnifeThrow", "ButtonInfo", function()
+game:GetService("ReplicatedStorage").Attacks.OverHeavenKnifeThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.OverHeavenKnifeThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.OverHeavenKnifeThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.OverHeavenKnifeThrow:FireServer()
+end)
+twoh1stSection:NewButton("OverHeavenLightningBolt", "ButtonInfo", function()
+game:GetService("ReplicatedStorage").SpecialMoves.HeavenlyLightningStrike:FireServer()
+game:GetService("ReplicatedStorage").SpecialMoves.HeavenlyLightningStrike:FireServer()
+game:GetService("ReplicatedStorage").SpecialMoves.HeavenlyLightningStrike:FireServer()
+game:GetService("ReplicatedStorage").SpecialMoves.HeavenlyLightningStrike:FireServer()
+game:GetService("ReplicatedStorage").SpecialMoves.HeavenlyLightningStrike:FireServer()
+game:GetService("ReplicatedStorage").SpecialMoves.HeavenlyLightningStrike:FireServer()
+game:GetService("ReplicatedStorage").SpecialMoves.HeavenlyLightningStrike:FireServer()
+game:GetService("ReplicatedStorage").SpecialMoves.HeavenlyLightningStrike:FireServer()
+end)
+local twoh2ndSection = TWOHTab:NewSection("Continuous")
+twoh2ndSection:NewToggle("HeavenlyLightningBolt", "ToggleInfo", function(state)
+    if state then
+        _G.thunder = true
+while _G.thunder == true do
+game:GetService("ReplicatedStorage").SpecialMoves.HeavenlyLightningStrike:FireServer()
+game:GetService("ReplicatedStorage").SpecialMoves.HeavenlyLightningStrike:FireServer()
+game:GetService("ReplicatedStorage").SpecialMoves.HeavenlyLightningStrike:FireServer()
+wait()
+end
+    else
+        _G.thunder = false
+while _G.thunder == true do
+game:GetService("ReplicatedStorage").SpecialMoves.HeavenlyLightningStrike:FireServer()
+wait()
+end
+    end
+end)
+twoh2ndSection:NewToggle("HeavenlyKnife", "ToggleInfo", function(state)
+    if state then
+        _G.thunder = true
+while _G.thunder == true do
+game:GetService("ReplicatedStorage").Attacks.OverHeavenKnifeThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.OverHeavenKnifeThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.OverHeavenKnifeThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.OverHeavenKnifeThrow:FireServer()
+wait()
+end
+    else
+        _G.thunder = false
+while _G.thunder == true do
+game:GetService("ReplicatedStorage").Attacks.OverHeavenKnifeThrow:FireServer()
+wait()
+end
+    end
+end)
+local twoh3rdSection = TWOHTab:NewSection("Inf Heal")
+twoh3rdSection:NewToggle("HeavenlyHeal", "Heals LocalPlayer", function(state)
+    if state then
+        _G.twoh = true
+while _G.twoh == true do
+local args = {
+    [1] = true,
+    [2] = game:GetService("Players").LocalPlayer.Character.Humanoid,
+    [3] = math.huge,
+    [7] = 1,
+    [8] = "rbxassetid://1202656211",
+    [9] = 2.25
+}
+
+game:GetService("ReplicatedStorage").Attacks.Heal.OverHeavenHeal:FireServer(unpack(args))
+wait()
+end
+    else
+        _G.twoh = false
+while _G.twoh == true do
+local args = {
+    [1] = true,
+    [2] = game:GetService("Players").LocalPlayer.Character.Humanoid,
+    [3] = math.huge,
+    [7] = 0.001,
+    [8] = "rbxassetid://1202656211",
+    [9] = 2.5
+}
+
+game:GetService("ReplicatedStorage").Attacks.Heal.OverHeavenHeal:FireServer(unpack(args))
+wait()
+end
+    end
+end)
+twoh3rdSection:NewToggle("Heal EveryOne", " ", function(state)
+ if state then
+getgenv().Toggled =false
+if state then
+getgenv().Delay = 0
+local UIS=game:GetService'UserInputService'
+local function Source()
+local LP = game.Players.LocalPlayer
+local success, err = pcall(function()
+for i,v in pairs(game:GetService("Players"):GetChildren()) do
+if v ~= game.Players.LocalPlayer then
+
+local args = {
+    [1] = false,
+    [2] = v.Character.Humanoid,
+    [3] = math.huge,
+    [4] = v.Character.HumanoidRootPart.Position,
+    [7] = 0.001,
+    [8] = "rbxassetid://1202656211",
+    [9] = 2.5
+}
+
+game:GetService("ReplicatedStorage").Attacks.Heal.OverHeavenHeal:FireServer(unpack(args))
+wait(0.1)
+end
+end
+end)
+if err then
+warn(err)
+end
+end
+    if state then
+        if getgenv().Toggled then
+            getgenv().Toggled=false
+                    elseif not getgenv().Toggled then
+            getgenv().Toggled=true
+            while getgenv().Toggled do
+                Source()
+                wait(getgenv().Delay)
+            end
+        end
+    end
+end
+    else
+       getgenv().Toggled=false
+    end
+end)
+---end of the world over heaven section
+
+
+
+
+
+
+
+
+---Golden experience section
+local geTab = Window:NewTab("Ge/Ger Stuff")
+local ge1stSection = geTab:NewSection("Inf Heal")
+ge1stSection:NewToggle("Ge/Ger Heal", "golden experience heal", function(state)
+    if state then
+        _G.ger = true
+while _G.ger == true do
+local args = {
+    [1] = true,
+    [2] = game:GetService("Players").LocalPlayer.Character.Humanoid,
+    [3] = 45,
+    [4] = CFrame.new(Vector3.new(-732.9583129882812, -5.808611869812012, 1605.6365966796875), Vector3.new(-0.9816098809242249, -0.0007686087628826499, 0.1908964365720749)),
+    [7] = 1,
+    [8] = "rbxassetid://4567255304",
+    [9] = 2.75
+}
+
+game:GetService("ReplicatedStorage").Attacks.Heal.GEHeal:FireServer(unpack(args))
+
+wait()
+end
+    else
+        _G.ger = false
+while _G.ger == true do
+local args = {
+    [1] = true,
+    [2] = game:GetService("Players").LocalPlayer.Character.Humanoid,
+    [3] = 45,
+    [4] = CFrame.new(Vector3.new(-732.9583129882812, -5.808611869812012, 1605.6365966796875), Vector3.new(-0.9816098809242249, -0.0007686087628826499, 0.1908964365720749)),
+    [7] = 1,
+    [8] = "rbxassetid://4567255304",
+    [9] = 2.75
+}
+
+game:GetService("ReplicatedStorage").Attacks.Heal.GEHeal:FireServer(unpack(args))
+
+wait()
+end
+    end
+end)
+----ge end
+
+
+---tw
+local TwTab = Window:NewTab("Tw Stuff")
+local TheWorldSection = TwTab:NewSection("Tapper")
+
+TheWorldSection:NewButton("Dios Knife", " ", function()
+game:GetService("ReplicatedStorage").Attacks.DioKnifeThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.DioKnifeThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.DioKnifeThrow:FireServer()
+
+end)
+
+
+local TheWorld2Section = TwTab:NewSection("Continuouse")
+
+
+TheWorld2Section:NewToggle("Dios knives", " ", function(state)
+    if state then
+        _G.thunder = true
+while _G.thunder == true do
+game:GetService("ReplicatedStorage").Attacks.DioKnifeThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.DioKnifeThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.DioKnifeThrow:FireServer()
+wait()
+end
+    else
+        _G.thunder = false
+while _G.thunder == true do
+game:GetService("ReplicatedStorage").Attacks.DioKnifeThrow:FireServer()
+wait()
+end
+    end
+end)
+---tw end
+
+
+
+
+
+
+---hamon
+local HamonTab = Window:NewTab("Hamon Stuff")
+local HamonSection = HamonTab:NewSection("Attacker")
+HamonSection:NewToggle("InfSendo", "Use Hamon", function(state)
+    if state then
+        _G.loop = true 
+ 
+        while _G.loop == true do 
+        local args = {
+    [1] = "SendoRipple"
+}
+ 
+game:GetService("Players").LocalPlayer.Backpack.Hamon.HamonLocalisedRemote:FireServer(unpack(args)) 
+game:GetService("Players").LocalPlayer.Backpack.Hamon.HamonLocalisedRemote:FireServer(unpack(args)) 
+game:GetService("Players").LocalPlayer.Backpack.Hamon.HamonLocalisedRemote:FireServer(unpack(args)) 
+game:GetService("Players").LocalPlayer.Backpack.Hamon.HamonLocalisedRemote:FireServer(unpack(args)) 
+game:GetService("Players").LocalPlayer.Backpack.Hamon.HamonLocalisedRemote:FireServer(unpack(args)) 
+wait()
+end
+    else
+        _G.loop = false 
+ 
+        while _G.loop == true do 
+        local args = {
+    [1] = "SendoRipple"
+}
+ 
+game:GetService("Players").LocalPlayer.Backpack.Hamon.HamonLocalisedRemote:FireServer(unpack(args)) 
+game:GetService("Players").LocalPlayer.Backpack.Hamon.HamonLocalisedRemote:FireServer(unpack(args)) 
+game:GetService("Players").LocalPlayer.Backpack.Hamon.HamonLocalisedRemote:FireServer(unpack(args)) 
+game:GetService("Players").LocalPlayer.Backpack.Hamon.HamonLocalisedRemote:FireServer(unpack(args)) 
+game:GetService("Players").LocalPlayer.Backpack.Hamon.HamonLocalisedRemote:FireServer(unpack(args)) 
+wait()
+end
+    end
+end)
+local Hamon2ndSection = HamonTab:NewSection("Other")
+Hamon2ndSection:NewButton("GetHamon", " ", function()
+   game:GetService("ReplicatedStorage").AbilityGiver.GetHamon:FireServer()
+end)
+---hamon end
+
+
+
+
+---The Hand
+local TheHandTab = Window:NewTab("The Hand Stuff")
+local TheHandSection = TheHandTab:NewSection("The hand Effect")
+ 
+TheHandSection:NewToggle("ErasurePull", " ", function(state)
+    if state then
+        _G.loop = true 
+ 
+        while _G.loop == true do 
+        local args = {
+    [1] = "Pull",
+    [2] = 50
+}
+ 
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("The Hand").THLocalisedRemote:FireServer(unpack(args)) 
+wait(3)
+end
+    else
+        _G.loop = false 
+ 
+        while _G.loop == true do 
+        local args = {
+    [1] = "Pull",
+    [2] = 50
+}
+ 
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("The Hand").THLocalisedRemote:FireServer(unpack(args)) 
+wait(3)
+end
+    end
+end)
+---the hand end
+
+
+
+
+---kc
+local KcTab = Window:NewTab("KingCrimson Stuff")
+local kc1stSection = KcTab:NewSection("Tapper")
+kc1stSection:NewButton("BloodThrow", " ", function()
+    local args = {
+    [1] = "BloodThrow",
+    [2] = nil --[[Vector3]]
+}
+
+game:GetService("Players").LocalPlayer.Backpack["King Crimson"].KCLocalisedRemote:FireServer(unpack(args))
+end)
+local kc2ndSection = KcTab:NewSection("GodMode")
+kc2ndSection:NewToggle("GodMode", " ", function(state)
+    if state then
+     _G.epitah = true
+while _G.epitah == true do
+local args = {
+    [1] = "Epitaph"
+}
+
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("King Crimson").KCLocalisedRemote:FireServer(unpack(args))
+wait()
+end
+    else
+        _G.epitah = false
+while _G.epitah == true do
+local args = {
+    [1] = "Epitaph"
+}
+
+game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("King Crimson").KCLocalisedRemote:FireServer(unpack(args))
+wait()
+end
+    end
+end)
+
+
+
+
+
+---Star platinum
+local StarPlatinumTab = Window:NewTab("StarPlatinum Stuff")
+local sp1stSection = StarPlatinumTab:NewSection("Tapper")
+sp1stSection:NewButton("RockThrow", " ", function()
+game:GetService("ReplicatedStorage").Attacks.RockThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.RockThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.RockThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.RockThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.RockThrow:FireServer()
+
+end)
+local sp2ndSection = StarPlatinumTab:NewSection("Continuous")
+sp2ndSection:NewToggle("RockThrow", " ", function(state)
+    if state then
+        _G.sp = true
+while _G.sp == true do
+game:GetService("ReplicatedStorage").Attacks.RockThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.RockThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.RockThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.RockThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.RockThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.RockThrow:FireServer()
+wait()
+end
+    else
+        _G.sp = false
+while _G.sp == true do
+game:GetService("ReplicatedStorage").Attacks.RockThrow:FireServer()
+wait()
+end
+    end
+end)
+---sp end
+
+
+
+
+---vtw
+local VTWTab = Window:NewTab("V.T.W Stuff")
+local vtw1stSection = VTWTab:NewSection("Tapper")
+vtw1stSection:NewButton("DiosVampiricKnife", " ", function()
+game:GetService("ReplicatedStorage").Attacks.DioKnifeThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.DioKnifeThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.DioKnifeThrow:FireServer()
+end)
+
+vtw1stSection:NewButton("VampiricLasers", " ", function()
+game:GetService("ReplicatedStorage").Attacks.SpaceRipper:FireServer()
+game:GetService("ReplicatedStorage").Attacks.SpaceRipper:FireServer()
+game:GetService("ReplicatedStorage").Attacks.SpaceRipper:FireServer()
+end)
+local vtw2ndSection = VTWTab:NewSection("Continuous")
+vtw2ndSection:NewToggle("ContinuousKnives", " ", function(state)
+    if state then
+        _G.sp = true
+while _G.sp == true do
+game:GetService("ReplicatedStorage").Attacks.DioKnifeThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.DioKnifeThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.DioKnifeThrow:FireServer()
+game:GetService("ReplicatedStorage").Attacks.DioKnifeThrow:FireServer()
+wait()
+end
+    else
+        _G.sp = false
+while _G.sp == true do
+game:GetService("ReplicatedStorage").Attacks.DioKnifeThrow:FireServer()
+wait()
+end
+    end
+end)
+vtw2ndSection:NewToggle("ContinuousLaser", " ", function(state)
+    if state then
+        _G.sp = true
+while _G.sp == true do
+game:GetService("ReplicatedStorage").Attacks.SpaceRipper:FireServer()
+game:GetService("ReplicatedStorage").Attacks.SpaceRipper:FireServer()
+game:GetService("ReplicatedStorage").Attacks.SpaceRipper:FireServer()
+game:GetService("ReplicatedStorage").Attacks.SpaceRipper:FireServer()
+game:GetService("ReplicatedStorage").Attacks.SpaceRipper:FireServer()
+wait()
+end
+    else
+        _G.sp = false
+while _G.sp == true do
+game:GetService("ReplicatedStorage").Attacks.SpaceRipper:FireServer()
+wait()
+end
+    end
+end)
+local vtw3rdSection = VTWTab:NewSection("Heal")
+vtw3rdSection:NewToggle("InfVampHeal", " ", function(state)
+    if state then
+        _G.loop = true 
+ 
+        while _G.loop == true do 
+        local Event = game:GetService("ReplicatedStorage").SpecialMoves.VampireHealEvent:FireServer() 
+wait(0.1)
+end
+    else
+        _G.loop = false 
+ 
+        while _G.loop == true do 
+        local Event = game:GetService("ReplicatedStorage").SpecialMoves.VampireHealEvent:FireServer()
+wait(2)
+end
+    end
+end)
+---vtw end
+
+
+
+---other
+local EssentialsTab = Window:NewTab("Essentials")
+local essen1stSection = EssentialsTab:NewSection("Storage")
+essen1stSection:NewButton("storage 1", "stores", function()
+local args = {
+    [1] = 2
+}
+
+game:GetService("ReplicatedStorage").Essentals.StandStorage:FireServer(unpack(args))
+end)
+
+essen1stSection:NewButton("storage 2", "stores", function()
+local args = {
+    [1] = 1
+}
+
+game:GetService("ReplicatedStorage").Essentals.StandStorage:FireServer(unpack(args))
+end)
+
+essen1stSection:NewButton("storage 3", "stores", function()
+local args = {
+    [1] = 3
+}
+
+game:GetService("ReplicatedStorage").Essentals.StandStorage:FireServer(unpack(args))
+end)
+local essen2ndSection = EssentialsTab:NewSection("Other")
+essen2ndSection:NewButton("buy arrow", "buys arrow", function()
+   game:GetService("ReplicatedStorage").ItemGiver.GiveArrow:FireServer() 
+end)
+essen2ndSection:NewToggle("AutoBlock", "Protection", function(state)
+    if state then
+        _G.loop = true 
+ 
+        while _G.loop == true do 
+        local args = {
+    [1] = true
+}
+ 
+game:GetService("ReplicatedStorage").Basic.Block:FireServer(unpack(args)) 
+wait(1)
+end
+    else
+        _G.loop = false 
+ 
+        while _G.loop == true do 
+        local args = {
+    [1] = true
+}
+ 
+game:GetService("ReplicatedStorage").Basic.Block:FireServer(unpack(args)) 
+wait(1)
+end
+    end
+end)
+essen2ndSection:NewButton("Move In ts", "Use this To move in ts", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/NWDdgUpb"))()
+end)
+
+essen2ndSection:NewButton("No cooldown", " ", function()
+g = hookfunction(wait, function(seconds) return g(0.1) end)
+end)
+
+essen2ndSection:NewButton("Fly", " ", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/iQRpDC1P"))()
+end)
+
+essen2ndSection:NewButton("Inf yield", " ", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/jEWQQQcR"))()
+end)
+
+
+essen2ndSection:NewToggle("KillAura", " ", function(state)
+    if state then
+getgenv().Toggled =false
+if state then
+getgenv().Delay = 0
+local UIS=game:GetService'UserInputService'
+local function Source()
+local LP = game.Players.LocalPlayer
+local success, err = pcall(function()
+for i,v in pairs(game:GetService("Players"):GetChildren()) do
+if v ~= game.Players.LocalPlayer then
+local args = {
+    [1] = v.Character.Humanoid,
+    [2] = 100,
+    [3] = v.Character.HumanoidRootPart.Position,
+    [4] = v.Character.HumanoidRootPart.Position,
+    [5] = 0.1,
+    [6] = 1,
+    [7] = "rbxassetid://260430079",
+    [8] = 0.6
+}
+
+game:GetService("ReplicatedStorage").Attacks.DamageBlunt:FireServer(unpack(args))
+local args = {
+    [1] = v.Character
+}
+
+game:GetService("ReplicatedStorage").SpecialMoves.BlockBreak:FireServer(unpack(args))
+end
+end
+end)
+if err then
+warn(err)
+end
+end
+    if state then
+        if getgenv().Toggled then
+            getgenv().Toggled=false
+                    elseif not getgenv().Toggled then
+            getgenv().Toggled=true
+            while getgenv().Toggled do
+                Source()
+                wait(getgenv().Delay)
+            end
+        end
+    end
+end
+    else
+       getgenv().Toggled=false
+    end
+end)
+
